@@ -1,0 +1,141 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+  .nav-tabs .nav-link
+    min-width: 175px
+  .search__popular
+    width: calc(100% - 20px - 525px)
+  .navbar
+    padding: 0
+  .navbar-brand
+    margin-right: 20px
+  .logo
+    transform: scale(0.6)
+  .navbar-brand
+    font-size: 24px
+  .navbar
+    .btn
+      width: 40px
+      height: 40px
+      line-height: 40px
+      font-size: 16px
+    .btn-blue
+      background-size: 11px
+    .btn-orange
+      background-size: 15px
+  .navbar .btn.active
+    width: 200px
+    background-position: left 15px center
+@media only screen and (max-width : 991px)
+  .search__popular
+    width: 100%
+    max-width: 100%
+  .filter .dropdown-toggle:after
+    margin-left: 10px
+  .filter .dropdown-menu
+    padding: 50px 10px 10px 10px
+  .check
+    margin-right: 10px
+  .price
+    width: 80px
+    height: 40px
+  .navbar-brand
+    font-size: 18px
+    margin-right: 10px
+  .nav-link-upper .nav-link
+    padding: 0 15px
+    font-size: 14px
+  .nav-link-upper:nth-child(2) .nav-link
+    padding-left: 15px
+  .nav-user
+    width: 15px
+    height: 16px
+    margin-right: 10px
+  .navbar
+    min-height: 60px
+  .navbar-nav .nav-link
+    padding: 0 15px
+  .logo-text
+    display: none
+@media only screen and (max-width : 767px)
+  .popular .title
+    width: 100%
+  .slick-dots
+    top: auto
+    bottom: 0
+    right: 0
+    justify-content: center
+  .text-18
+    font-size: 16px
+  .title-main
+    font-size: 42px
+  .offer
+    min-height: 400px
+    padding: 60px 10px
+  .btn
+    height: 40px
+    font-size: 16px
+    width: fit-content
+    line-height: 40px
+    background-position: left 15px center
+  .btn-orange
+    background-size: 15px
+  .btn-blue
+    background-size: 11px
+  .card__title
+    font-size: 16px
+  .text-14
+    font-size: 13px
+  .nav-tabs
+    width: 100%
+    .nav-item
+      width: 33.33%
+  .nav-tabs .nav-link
+    width: 100%
+    min-width: 100%
+    padding: 20px
+  .footer .text-19
+    text-align: left
+  .card
+    max-width: 280px
+  .slider
+    margin: 0
+  .menu
+    position: absolute
+    right: 0
+    top: 100%
+    background: #fff
+    padding: 20px
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05)
+    border-radius: 0 0 0 15px
+    display: none
+  .navbar .btn
+    width: fit-content
+    border-radius: 61px
+    background-position: left 15px center
+    color: #ffffff
+    border-radius: 61px
+    padding: 0 20px 0 45px
+  .navbar-expand .navbar-toggler
+    display: block
+@media only screen and (max-width : 575px)
+  .title
+    font-size: 26px
+  .popular
+    padding: 40px 0
+  .nav-tabs .nav-link
+    border-radius: 0
+    padding: 15px 10px
+    font-size: 12px
+  .filter
+    .dropdown
+      width: 100%
+    .dropdown-toggle
+      border: none
+  .page-link
+    padding: 0 9px
+    line-height: 25px
+    font-size: 13px

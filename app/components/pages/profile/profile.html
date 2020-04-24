@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>EduCat-e</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div id="wrapper">
+    @import "header.html"
+    <div id="wrapper-content">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="pt-3">
+                <ol class="breadcrumb px-0 py-2 m-0">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Профиль</li>
+                </ol>
+            </nav>
+            <ul class="nav nav-tabs mt-5 mb-4" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="mycourses-tab" data-toggle="tab" href="#mycourses" role="tab" aria-controls="mycourses" aria-selected="false">my courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="purchasedCourses-tab" data-toggle="tab" href="#purchasedCourses" role="tab" aria-controls="purchasedCourses" aria-selected="false">Purchased Courses</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="d-flex flex-wrap">
+                        <div class="profile__left">
+                            <h2 class="title-32 mb-2">Main</h2>
+                            <form class="form mb-3">
+                                <div class="field">
+                                    <p class="mb-3">Nickname</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="text" class="input" placeholder="Enter lesson title...">
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="loader">
+                                                    <input type="file" id="files" name="files[]" multiple value="Загрузить файлы" accept="image/jpeg,image/jpg,image/png,image/gif">
+                                                    <label for="files" class="btn btn-green d-flex align-items-center justify-content-center">avatar</label>
+                                                </div>
+                                                <div class="loader-containt">
+                                                    <div class="delete active"><img src="img/delete.svg" alt="delete" class="delete-icon"></div>
+                                                    <div id="loader-avatar">
+                                                        <label>
+                                                            <img src="img/img.jpg" alt="img" class="loader-avatar_img">
+                                                        </label>
+                                                    </div>
+                                                 </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="mb-3">Name</p>
+                                        <input type="text" class="input" placeholder="Enter name...">
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-3">Second name</p>
+                                        <input type="text" class="input" placeholder="Enter second name...">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="form">
+                                <p class="mb-3">About me</p>
+                                <textarea class="textarea" placeholder="Enter about me..."></textarea>
+                            </div>
+                        </div>
+                        <div class="profile__right">
+                            <h2 class="title-32 mb-2">Communication</h2>
+                            <form class="form mb-3">
+                                <p class="mb-3">E-mail</p>
+                                <input type="text" class="input mb-3" placeholder="Enter e-mail...">
+                            </form>
+                            <form class="form mb-3">
+                                <p class="mb-3">Phone</p>
+                                <input type="text" class="input mb-3"" placeholder="Enter phone...">
+                            </form>
+                            <form class="form">
+                                <div class="row">
+                                    <div class="col-6 mb-4 pb-2">
+                                        <p class="mb-3">Facebook</p>
+                                        <input type="text" class="input" placeholder="Enter...">
+                                    </div>
+                                    <div class="col-6 mb-4 pb-2">
+                                        <p class="mb-3">Linkedin</p>
+                                        <input type="text" class="input" placeholder="Enter...">
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-3">Instagram</p>
+                                        <input type="text" class="input" placeholder="Enter...">
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-3">Youtube</p>
+                                        <input type="text" class="input" placeholder="Enter...">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="mycourses" role="tabpanel" aria-labelledby="mycourses-tab">
+
+                </div>
+                <div class="tab-pane fade" id="purchasedCourses" role="tabpanel" aria-labelledby="purchasedCourses-tab">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    @import "footer.html"
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

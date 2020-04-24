@@ -1,0 +1,490 @@
+@import "fonts"
+@import "vars"
+
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*:-moz-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*::-moz-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*:-ms-input-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+a
+  outline: none
+  text-decoration: none
+  color: #000000
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-family: "Roboto", sans-serif
+  font-size: 16px
+  position: relative
+  line-height: normal
+  font-style: normal
+  font-weight: normal
+  background: #F3F4F6
+  color: #000000
+img
+  display: block
+  object-fit: contain
+
+input, textarea
+  border: none
+  outline: none
+  color: #000
+  resize: none
+  -webkit-appearance: none
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 16px
+  padding: 12px 25px
+  border-radius: 61px
+  background: transparent
+button
+  cursor: pointer
+  outline: none
+  border: none
+button:focus
+  outline: none
+p
+  color: #000000
+  line-height: 16px
+.overlay
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 8
+  background: rgba(#000, 0.6)
+  width: 100%
+  height: 100%
+  pointer-events: none
+  opacity: 0
+  transition: all 0.3s ease
+  &.active
+    pointer-events: auto
+    opacity: 1
+.footer
+  .text-14
+    line-height: 20px
+    a
+      font-weight: 500
+      font-family: "Roboto-Medium", sans-serif
+  .text-19
+    text-align: right
+.header
+  position: sticky
+  top: 0
+  background: $color5
+  z-index: 9
+.logo
+  width: 77px
+  height: 70px
+.navbar-brand
+  font-family: "Segoe-MDL2-Assests", sans-serif
+  font-size: 30px
+  margin-right: 52px
+.navbar .nav-item
+  border-left: 1px solid rgba(0, 0, 0, 0.15)
+.navbar
+  min-height: 80px
+  .btn
+    width: 55px
+    color: transparent
+    border-radius: 50%
+    padding: 0
+    background-position: 50% 50%
+    &.active
+      width: 280px
+      color: $color5
+      border-radius: 61px
+      background-position: left 20px center
+      padding: 0 20px 0 40px
+.navbar-nav .nav-link
+  padding: 0 23px
+  line-height: 1
+  white-space: nowrap
+  min-height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 14px
+.nav-user
+  width: 20px
+  height: 18px
+  margin-right: 25px
+.nav-link-upper
+  .nav-link
+    font-size: 16px
+    text-transform: uppercase
+    padding: 0 29px
+  &:first-child
+    border: none
+  &:nth-child(2)
+    .nav-link
+      padding: 0 0 0 29px
+.dropdown-toggle:after
+  width: 0
+  height: 0
+  margin-left: 16px
+  border-style: solid
+  border-width: 5px 5px 0 5px
+  border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent
+.dropdown-item
+  padding: 5px 20px
+.navbar-toggler
+  position: relative
+  width: 40px
+  height: 40px
+  &:focus
+    box-shadow: none
+  &.active
+    .navbar-toggler-top
+      top: 50%
+      transform: translate(-50%, -50%) rotate(225deg)
+    .navbar-toggler-center
+      opacity: 0
+    .navbar-toggler-bottom
+      top: 50%
+      transform: translate(-50%, -50%) rotate(-225deg)
+  &-line
+    height: 2px
+    width: 25px
+    background: #393E46
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    display: block
+    transition: all 0.3s ease
+  &-top
+    top: 10px
+  &-center
+    top: 50%
+    transform: translate(-50%, -50%)
+  &-bottom
+    bottom: 10px
+.btn
+  font-family: "Roboto-Medium",sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  text-align: center
+  text-transform: uppercase
+  color: #FFFFFF
+  border-radius: 61px
+  line-height: 55px
+  border: none
+  padding: 0 20px 0 40px
+  width: 280px
+  display: block
+  height: 55px
+  transition: all 0.3s ease
+  overflow: hidden
+  &-blue
+    background: $color1 url("../img/icon-btn-1.svg") no-repeat left 20px center / 16px
+  &-orange
+    background: $color3 url("../img/icon-btn-2.svg") no-repeat left 20px center / 20px
+  &-search
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    svg
+      width: 15px
+      height: 20px
+  &-white
+    color: $color3
+    background: #FFFFFF
+    padding: 0 20px
+  &-green
+    width: 100%
+    background: #0F976A url("../img/arrow-down.svg") no-repeat left 20px center / 16px
+    padding: 0 20px
+.loader
+  width: calc(100% - 80px - 15px)
+.loader-avatar_img
+  object-fit: cover
+  width: 80px
+  height: 55px
+  border-radius: 15px
+.loader-containt
+  position: relative
+  width: 80px
+  height: 55px
+.delete
+  background: #FA5D43
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  position: absolute
+  right: -10px
+  top: -10px
+  display: none
+  cursor: pointer
+  &-icon
+    width: 10px
+    height: 100%
+    margin: 0 auto
+  &.active
+    display: block
+.search
+  display: flex
+  background: rgba(255, 255, 255, 0.21)
+  border-radius: 61px
+  max-width: 580px
+  width: 100%
+  margin: 0 auto
+  &-input
+    width: calc(100% - 40px)
+    color: #fff
+    &::-webkit-input-placeholder
+      color: #fff
+    &:-moz-placeholder
+      color: #fff
+    &::-moz-placeholder
+      color: #fff
+    &:-ms-input-placeholder
+      color: #fff
+  &__popular
+    max-width: initial
+    width: calc(100% - 710px)
+    border: 1px solid #E0E0E0
+    box-sizing: border-box
+    border-radius: 61px
+    height: fit-content
+    input
+      color: #000000
+      &::-webkit-input-placeholder
+        color: #A9A9A9
+      &:-moz-placeholder
+        color: #A9A9A9
+      &::-moz-placeholder
+        color: #A9A9A9
+      &:-ms-input-placeholder
+        color: #A9A9A9
+.dropdown-menu
+  width: 100%
+  min-width: 100%
+.filter
+  .dropdown-toggle
+    padding: 12px 20px
+    border-right: 1px solid rgba(255, 255, 255, 0.25)
+    &.show
+      position: relative
+      z-index: 2
+      .text-14
+        color: #393E46
+      &:after
+        border-color: #393E46 transparent transparent transparent
+  .dropdown-toggle:after
+    border-color: #FFFFFF transparent transparent transparent
+    margin-left: 45px
+  .dropdown-menu
+    background: #FFFFFF
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05)
+    border-radius: 15px
+    z-index: 1
+    padding: 50px 20px 20px 20px
+    &.show
+      transform: none!important
+      width: 100%
+.breadcrumb-item+.breadcrumb-item:before
+  content: ''
+  background: url("../img/arrow-black.svg") no-repeat center / contain
+  margin-right: 20px
+  width: 5px
+  height: 100%
+  padding-right: 0
+.breadcrumb-item
+  font-family: "Roboto-Light", sans-serif
+  font-style: normal
+  font-weight: 300
+  font-size: 16px
+  line-height: 19px
+  color: #000000
+.breadcrumb-item.active
+  font-family: "Roboto-Medium", sans-serif
+  font-style: normal
+  font-weight: 500
+  color: #000000
+.breadcrumb-item+.breadcrumb-item
+  padding-left: 20px
+.pagination
+  border-top: 1px solid #E0E0E0
+.page-link
+  background: transparent
+  color: #000000
+  padding: 0 16px
+  line-height: 30px
+  border: none
+  border-radius: 15px
+  svg
+    fill: #000
+    width: 11px
+    height: 9px
+  &.active, &:focus
+    background: #166ED2
+    color: #FFFFFF
+    box-shadow: none
+    &:hover
+      background: #166ED2
+      color: #FFFFFF
+  &:hover
+    color: #000000
+    background: transparent
+.page-next, .page-prev
+  color: rgba(0, 0, 0, 0.2)
+  border-radius: 0
+  line-height: 25px
+  padding: 0 13px
+  &:hover
+    color: rgba(0, 0, 0, 0.2)
+.page-prev
+  border-right: 1px solid rgba(0, 0, 0, 0.15)
+.page-next
+  border-left: 1px solid rgba(0, 0, 0, 0.15)
+.check
+  background: #FFFFFF
+  border: 1px solid #E0E0E0
+  box-sizing: border-box
+  border-radius: 5px
+  width: 15px
+  height: 15px
+  display: block
+  margin-right: 19px
+.checkbox
+  display: none
+  &:checked ~ .check
+    background: #FFFFFF url("../img/check.svg") no-repeat center / 80%
+
+.slick-slide
+  margin: 0 10px
+.slider
+  margin: 0 -10px
+.slick-dots
+  right: 3px
+  top: -58px
+  bottom: auto
+  display: flex
+  justify-content: flex-end
+  li
+    width: 9px
+    height: 9px
+    padding: 0
+    margin: 0 8px
+    button
+      width: 9px
+      height: 9px
+      padding: 0
+      border-radius: 50%
+      color: transparent
+      background: rgba(57, 62, 70, 0.15)
+      &:before
+        content: none
+    &.slick-active
+      button
+        background: #393E46
+#files
+  display: none
+.text-19
+  font-size: 19px
+  line-height: 22px
+  color: #FFFFFF
+.text-18
+  font-weight: normal
+  font-size: 18px
+  line-height: 21px
+  color: #FFFFFF
+
+.text-14
+  font-size: 14px
+  line-height: 16px
+  color: #FFFFFF
+.title-main
+  font-size: 54px
+  line-height: 63px
+  color: #FFFFFF
+.title
+  font-size: 32px
+  line-height: 37px
+  color: #393E46
+.title-32
+  font-size: 32px
+  color: #000000
+.c-dark
+  color: #393E46
+.c-black
+  color: #000000
+.c-orange
+  color: $color3
+.c-green
+  color: $color2
+
+.bg-blue
+  background-color: $color1
+  svg
+    fill: #ffffff
+.bg-green
+  background-color: $color2
+.bg-dark
+  background-color: #393E46
+.bg-white
+  svg
+    fill: #000000
+
+
+@import "../components/pages/home/style"
+@import "../components/pages/profile/style"
+
+@import "media"
+// Всегда в конце
