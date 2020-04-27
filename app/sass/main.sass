@@ -102,6 +102,8 @@ strong
   font-family: "Roboto-Bold", sans-serif
   font-style: normal
   font-weight: bold
+#wrapper-content
+  min-height: calc(100vh - 80px - 159px)
 .overlay
   position: fixed
   left: 0
@@ -291,6 +293,10 @@ strong
     background: $color1 url("../img/icon-btn-1.svg") no-repeat left 20px center / 16px
     &:hover
       background-color: #1B83F9
+  &-blue-two
+    border: 1px solid #166ED2
+    line-height: 53px
+    color: #166ED2
   &-orange
     max-width: 280px
     padding: 0 20px 0 40px
@@ -323,6 +329,9 @@ strong
     border: 1px solid #9D9D9D
     line-height: 53px
     color: #9D9D9D
+.btn-buyed
+  background: $color3 url("../img/check-white.svg") no-repeat left 20px center / 16px 18px
+
 .btn-buy
   max-width: 100px
   height: 45px
@@ -657,6 +666,7 @@ strong
 @import "../components/pages/profile/style"
 @import "../components/pages/start/style"
 @import "../components/pages/course/style"
+@import "../components/pages/lesson/style"
 
 @import "media"
 // Всегда в конце
