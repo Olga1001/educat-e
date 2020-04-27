@@ -1,14 +1,16 @@
 .profile
   &__left
-    max-width: 680px
-    width: 100%
+    width: calc(100% - 20px - 480px)
     margin-right: 20px
   &__right
-    width: calc(100% - 680px - 20px)
-.form
+    width: 480px
+.form-box
   background: #FFFFFF
   border-radius: 15px
-  padding: 40px 30px
+  padding: 45px 30px 5px 30px
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05)
+  width: 100%
+
 .input, .textarea
   background: #FFFFFF
   border: 1px solid #C4C4C4
@@ -50,9 +52,31 @@
     font-size: 16px
     line-height: 19px
     color: #C4C4C4
-.field
-  margin-bottom: 34px
+.form-group
+  margin-bottom: 40px
+  min-height: 55px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  .check
+    margin-right: 12px
 .textarea
   border-radius: 15px
-  height: 256px
+  height: 246px
   resize: none
+.tags
+  display: flex
+  flex-wrap: wrap
+  &-item
+    line-height: 33px
+    white-space: nowrap
+    padding: 0 25px
+    font-style: italic
+    font-size: 16px
+    color: #FFFFFF
+    border-radius: 61px
+#tabProfile
+  .nav-item
+    width: 25%
+#tabProfileContent
+  margin-top: 33px

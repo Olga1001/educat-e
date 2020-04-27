@@ -4,6 +4,7 @@
   padding: 60px 10px 40px 10px
   width: 100%
   text-align: center
+
 hr
   max-width: 550px
   width: 100%
@@ -15,16 +16,27 @@ hr
   .title
     margin-bottom: 37px
     width: 70%
+  .btn-search
+
 .card
   border-radius: 15px
   background: #FFFFFF
-  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05)
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.05)
   overflow: hidden
   height: 100%
   display: flex
   flex-direction: column
   justify-content: space-between
   margin: 0 auto
+  transition: all 0.3s ease
+  &:hover
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15)
+    .price
+      background: #FA5D43
+      .text-18
+        color: #fff
+    .price-green
+      background: #0F976A
   &__top
     position: relative
   &__type
@@ -62,6 +74,13 @@ hr
   &__title
     font-size: 19px
     line-height: 22px
+    display: block
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    position: relative
+    overflow: hidden
+    text-overflow: ellipsis
+
   &__list
     margin-bottom: 25px
     &-item
@@ -78,8 +97,11 @@ hr
   border-radius: 15px
   height: 45px
   width: 100px
+  transition: all 0.3s ease
+  padding: 5px
   .text-18
     font-family: "Roboto-Bold", sans-serif
+    transition: all 0.3s ease
 
 .nav-tabs .nav-link
   border: 1px solid #E0E0E0
@@ -93,9 +115,11 @@ hr
   text-transform: uppercase
   color: #393E46
   height: 100%
-  &.active
+  transition: all 0.3s ease
+  &.active, &:focus, &:hover
     background: #393E46
     color: #FFFFFF
+    border-color: #E0E0E0
 .popular__bg-white
   background: #fff
   position: absolute
@@ -104,3 +128,20 @@ hr
   width: 100%
   height: 480px
   z-index: -1
+.card__title:after
+  content: '...'
+  text-align: center
+  bottom: 0
+  right: 0
+  width: 25%
+  display: block
+  position: absolute
+  height: calc(1em * 1.3)
+  background: linear-gradient(to left, rgba(241, 242, 246, 0.1), rgba(241, 242, 246, 0.5) 75%)
+
+@supports (-webkit-line-clamp: 2)
+  .card__title:after
+    display: none !important
+  .card__title
+    -webkit-line-clamp: 2
+    height: calc(1em * 22px * 2)

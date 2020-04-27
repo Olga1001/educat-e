@@ -98,6 +98,10 @@ button:focus
 p
   color: #000000
   line-height: 16px
+strong
+  font-family: "Roboto-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
 .overlay
   position: fixed
   left: 0
@@ -112,6 +116,49 @@ p
   &.active
     pointer-events: auto
     opacity: 1
+.select
+  height: 55px
+  position: relative
+  &-item, select
+    height: 100%
+    outline: none
+    background: #FFFFFF
+    border: 1px solid #C4C4C4
+    box-sizing: border-box
+    border-radius: 61px
+    line-height: 53px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    font-size: 16px
+    color: #C4C4C4
+    padding: 0 40px 0 25px
+    width: 100%
+    cursor: pointer
+    font-style: italic
+    appearance: none
+  &:before
+    content: ''
+    position: absolute
+    right: 25px
+    top: 50%
+    transform: translateY(-50%)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 5px 5px 0 5px
+    border-color: #C4C4C4 transparent transparent transparent
+    pointer-events: none
+.select-drop
+  display: none
+.arrow
+  width: 14px
+  height: 14px
+  margin-right: 15px
+  transition: all 0.3s ease
+.edit img
+  width: 27px
+  height: 27px
 .footer
   .text-14
     line-height: 20px
@@ -125,6 +172,7 @@ p
   top: 0
   background: $color5
   z-index: 9
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
 .logo
   width: 77px
   height: 70px
@@ -142,7 +190,7 @@ p
     border-radius: 50%
     padding: 0
     background-position: 50% 50%
-    &.active
+    &:hover
       width: 280px
       color: $color5
       border-radius: 61px
@@ -161,11 +209,19 @@ p
   width: 20px
   height: 18px
   margin-right: 25px
+  opacity: 0.15
+  transition: all 0.3s ease
 .nav-link-upper
   .nav-link
     font-size: 16px
     text-transform: uppercase
     padding: 0 29px
+    transition: all 0.3s ease
+    &:hover
+      color: #0F976A
+      svg
+        fill: #0F976A
+        opacity: 1
   &:first-child
     border: none
   &:nth-child(2)
@@ -222,16 +278,25 @@ p
   border-radius: 61px
   line-height: 55px
   border: none
-  padding: 0 20px 0 40px
-  width: 280px
+  padding: 0 20px
   display: block
   height: 55px
   transition: all 0.3s ease
   overflow: hidden
+  width: 100%
+  max-width: 305px
   &-blue
+    max-width: 280px
+    padding: 0 20px 0 40px
     background: $color1 url("../img/icon-btn-1.svg") no-repeat left 20px center / 16px
+    &:hover
+      background-color: #1B83F9
   &-orange
+    max-width: 280px
+    padding: 0 20px 0 40px
     background: $color3 url("../img/icon-btn-2.svg") no-repeat left 20px center / 20px
+    &:hover
+      background-color: #FF795B
   &-search
     width: 40px
     height: 40px
@@ -239,17 +304,38 @@ p
     display: flex
     justify-content: center
     align-items: center
+    transition: all 0.3s ease
     svg
       width: 15px
       height: 20px
+      transition: all 0.3s ease
   &-white
     color: $color3
     background: #FFFFFF
-    padding: 0 20px
+    max-width: 280px
+    &:hover
+      background: #FA5D43
+      color: #fff
   &-green
-    width: 100%
-    background: #0F976A url("../img/arrow-down.svg") no-repeat left 20px center / 16px
-    padding: 0 20px
+    background: $color2 url("../img/arrow-down.svg") no-repeat left 20px center / 16px
+    padding: 0 20px 0 36px
+  &-gray
+    border: 1px solid #9D9D9D
+    line-height: 53px
+    color: #9D9D9D
+.btn-add-lesson
+  height: 45px
+  line-height: 45px
+  max-width: 235px
+.btn-search.bg-white:hover
+  svg
+    fill: #0F976A
+.btn-search.bg-blue:hover
+  background-color: #1B83F9
+.btn.bg-orange:hover
+  background-color: #FF795B
+.btn.bg-blue:hover
+  background-color: #1B83F9
 .loader
   width: calc(100% - 80px - 15px)
 .loader-avatar_img
@@ -372,6 +458,7 @@ p
     fill: #000
     width: 11px
     height: 9px
+    opacity: 0.4
   &.active, &:focus
     background: #166ED2
     color: #FFFFFF
@@ -407,6 +494,62 @@ p
   &:checked ~ .check
     background: #FFFFFF url("../img/check.svg") no-repeat center / 80%
 
+.popup
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.4)
+  overflow-y: auto
+  z-index: 99
+  opacity: 0
+  pointer-events: none
+  transition:  all 0.3s ease
+  &.active
+    opacity: 1
+    pointer-events: auto
+  &-contain
+    max-width: 1180px
+    width: 100%
+    height: 100%
+    align-items: center
+    margin: 0 auto
+    padding: 0 10px
+    display: none
+    &.active
+      display: flex
+      &.height
+        display: block
+  .textarea
+    height: 170px
+  .form-box
+    padding: 48px 30px
+    position: relative
+    margin: 10px 0
+  .drop-files__item
+    min-height: 82px
+.popup-module-lesson
+  .textarea
+    height: 285px
+.close
+  position: absolute
+  right: 15px
+  top: 20px
+  width: 36px
+  height: 36px
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) rotate(45deg)
+    background: #C4C4C4
+    height: 2px
+    width: 26px
+  &:after
+    width: 2px
+    height: 26px
 .slick-slide
   margin: 0 10px
 .slider
@@ -469,7 +612,13 @@ p
   color: $color3
 .c-green
   color: $color2
+.c-blue
+  color: #166ED2
+.c-blue-light
+  color: rgba(22, 110, 210, 0.6)
 
+.bg-orange
+  background: #FA5D43
 .bg-blue
   background-color: $color1
   svg
@@ -481,10 +630,12 @@ p
 .bg-white
   svg
     fill: #000000
-
+.disabled
+  opacity: 0.2
 
 @import "../components/pages/home/style"
 @import "../components/pages/profile/style"
+@import "../components/pages/start/style"
 
 @import "media"
 // Всегда в конце

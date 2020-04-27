@@ -22,13 +22,25 @@
       height: 40px
       line-height: 40px
       font-size: 16px
+      &:hover
+        width: 200px
     .btn-blue
       background-size: 11px
     .btn-orange
       background-size: 15px
+
   .navbar .btn.active
     width: 200px
     background-position: left 15px center
+  .profile__right
+    width: 400px
+  .profile__left
+    width: calc(100% - 400px - 20px)
+  .btn-green
+    background-position: left 10px center
+    padding: 0 10px 0 26px
+  .start-item
+    padding: 130px 50px 70px 50px
 @media only screen and (max-width : 991px)
   .search__popular
     width: 100%
@@ -60,6 +72,31 @@
     padding: 0 15px
   .logo-text
     display: none
+  .profile__right
+    width: 100%
+  .profile__left
+    width: 100%
+    margin-right: 0
+  .btn-green
+    background-position: left 20px center
+  #tabProfile .nav-item
+    width: 50%
+  .start-item
+    padding: 70px 25px
+    min-height: 480px
+  .list__title
+    font-size: 18px
+  .type__item
+    margin: 0
+    padding: 5px 15px
+  .type__item.bg-blue
+    padding: 5px 15px
+  .types
+    margin-left: -10px
+    width: calc(100% - 70px)
+  .edit img
+    width: 20px
+    height: 20px
 @media only screen and (max-width : 767px)
   .popular .title
     width: 100%
@@ -78,13 +115,14 @@
   .btn
     height: 40px
     font-size: 16px
-    width: fit-content
     line-height: 40px
     background-position: left 15px center
   .btn-orange
     background-size: 15px
+    width: fit-content
   .btn-blue
     background-size: 11px
+    width: fit-content
   .card__title
     font-size: 16px
   .text-14
@@ -101,8 +139,6 @@
     text-align: left
   .card
     max-width: 280px
-  .slider
-    margin: 0
   .menu
     position: absolute
     right: 0
@@ -119,9 +155,50 @@
     color: #ffffff
     border-radius: 61px
     padding: 0 20px 0 45px
+    &:hover
+      width: fit-content
+      background-position: left 15px center
+      padding: 0 20px 0 45px
   .navbar-expand .navbar-toggler
     display: block
+  .loader .btn-green
+    height: 55px
+  .breadcrumb-item
+    font-size: 14px
+  .breadcrumb-item + .breadcrumb-item
+    padding-left: 10px
+  .breadcrumb-item + .breadcrumb-item:before
+    margin-right: 10px
+  .start-item
+    min-height: 400px
+  .start-item__title
+    font-size: 28px
+  .start
+    padding: 60px 0
+  .list__module
+    padding: 25px 10px 10px
+  .list__title
+    font-size: 16px
+  .edit img
+    width: 16px
+    height: 16px
+  .arrow
+    width: 10px
+    height: 10px
+    margin-right: 7px
+  .list-item
+    margin-bottom: 20px
+  .list__lessons-item
+    margin-bottom: 10px
+  .list__lessons
+    padding-top: 10px
+  .list__lessons-item
+    padding: 20px 10px
+  .type__item
+    width: 50%
 @media only screen and (max-width : 575px)
+  .slider
+    margin: 0
   .title
     font-size: 26px
   .popular
@@ -139,3 +216,28 @@
     padding: 0 9px
     line-height: 25px
     font-size: 13px
+  .form-box
+    padding: 30px 15px 5px 15px
+  .form-group
+    margin-bottom: 20px
+  .title-32
+    font-size: 26px
+  .tags-item
+    font-size: 14px
+    padding: 0 15px
+  .start-item
+    padding: 40px 15px
+  .drop-files__item p
+    font-size: 13px
+  .lesson, .course
+    .textarea
+      height: 300px
+  .popup .form-box
+    padding: 35px 10px
+  .close
+    right: 5px
+    top: 5px
+  .arrow
+    margin-top: 4px
+  .type__item
+    width: fit-content

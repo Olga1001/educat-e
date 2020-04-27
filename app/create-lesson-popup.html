@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>EduCat-e</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div id="wrapper">
+    <!-- header.html -->
+<header class="header">
+	<div class="container">
+		<nav class="navbar navbar-expand">
+			<a class="navbar-brand d-flex align-items-center" href="#"><img src="img/logo.svg" alt="logo" class="logo"><p class="logo-text">EduCat-e</p></a>
+            <ul class="navbar-nav mr-auto d-flex">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ENG
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">ENG</a>
+                        <a class="dropdown-item" href="#">RUS</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCurr" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        $
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCurr">
+                        <a class="dropdown-item" href="#">$</a>
+                        <a class="dropdown-item" href="#">$</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="menu d-md-flex align-items-center">
+
+                <div class="d-md-flex">
+                    <a href="#" class="btn btn-blue">start learning</a>
+                    <a href="#" class="btn btn-orange ml-md-2 my-md-0 my-3">start teaching</a>
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-link-upper">
+                        <a href="#" class="nav-link  d-flex align-items-center">
+                            <svg class="nav-user">
+                                <use xlink:href="img/sprite/sprite.svg#user"></use>
+                            </svg>
+                            log in
+                        </a>
+                    </li>
+                    <li class="nav-item nav-link-upper">
+                        <a href="#" class="nav-link">
+                            register
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-line navbar-toggler-top"></span>
+                <span class="navbar-toggler-line navbar-toggler-center"></span>
+                <span class="navbar-toggler-line navbar-toggler-bottom"></span>
+            </button>
+
+		</nav>
+	</div>
+</header>
+<div class="overlay"></div>
+    <div id="wrapper-content">
+        <div class="course py-5">
+            <div class="container">
+                <form class="form my-4 pb-3">
+                    <h2 class="title-32 mb-2">Create course</h2>
+                    <div class="d-flex flex-wrap">
+                        <div class="profile__left mb-5">
+                            <div class="form-box mb-4">
+                                <div class="form-group">
+                                    <label class="mb-3">Lesson title</label>
+                                    <input type="text" class="input" placeholder="Enter lesson title...">
+                                </div>
+                                <div class="form-group">
+                                    <label class="mb-3">Lesson description</label>
+                                    <textarea class="textarea" placeholder="Enter description..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-box mb-3">
+                                <div class="form-group">
+                                    <label class="mb-3">Add tags (up to 5)</label>
+                                    <input type="text" class="input" placeholder="Enter tags...">
+                                </div>
+                                <div class="form-group">
+                                    <div class="tags">
+                                        <a href="#" class="tags-item bg-green mr-2 mb-2">#drawing</a>
+                                        <a href="#" class="tags-item bg-green mr-2 mb-2">#uidesign</a>
+                                        <a href="#" class="tags-item bg-green mr-2 mb-2">#webdesign</a>
+                                        <a href="#" class="tags-item bg-green mr-2 mb-2">#so_long_hashtag</a>
+                                        <a href="#" class="tags-item bg-green mr-2 mb-2">#js</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="profile__right mb-5">
+                            <div class="form-box mb-4">
+                                <div class="form-group">
+                                    <label class="mb-3">Category</label>
+                                    <div class="select">
+                                        <select>
+                                            <option value="Select category" selected>Select category</option>
+                                            <option value="Select category">Select category</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-box mb-4">
+                                <div class="form-group">
+                                    <label class="mb-3">Language</label>
+                                    <div class="select">
+                                        <select>
+                                            <option value="Select category" selected>Russian</option>
+                                            <option value="Select category">Russian</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-box mb-4">
+                                <div class="row align-items-end">
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label class="mb-3">Language</label>
+                                            <input type="text" class="input" placeholder="Enter price">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <div class="select">
+                                                <select>
+                                                    <option value="Сurrency" selected disabled>Сurrency</option>
+                                                    <option value="">Сurrency</option>
+                                                    <option value="">Сurrency</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label class="d-flex">
+                                                <input type="checkbox" class="checkbox">
+                                                <span class="check"></span>
+                                                <span class="text-14 c-dark">Free</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-box mb-4">
+                                <div class="row align-items-end">
+                                    <div class="col-sm-9">
+                                        <div class="form-group">
+                                            <label class="mb-3">Number of seats in the lesson</label>
+                                            <input type="text" class="input" placeholder="Lesson data">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="d-flex">
+                                                <input type="checkbox" class="checkbox">
+                                                <span class="check"></span>
+                                                <span class="text-14 c-dark">Unlimited</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end pb-5">
+                        <button type="submit" class="btn bg-orange ml-md-3 mb-3">save changes</button>
+                    </div>
+                </form>
+                <h2 class="title-32 pt-5 pb-3 mb-4">Add modules and lessons</h2>
+                <ul class="list pb-5">
+                    <li class="list-item">
+                        <div class="list__module row align-items-center ">
+                            <div class="col-lg-5 d-flex align-items-sm-center mb-3">
+                                <img src="img/arrow.svg" alt="arrow" class="arrow">
+                                <div class="d-flex align-items-md-center">
+                                    <p class="list__title"><strong> Module 1: </strong> Lorem ipsum dolor sit amet </p>
+                                    <a href="#" class="edit">
+                                        <img src="img/edit.svg" alt="arrow">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 d-flex flex-wrap align-items-center justify-content-end ">
+                                <p class="text-14 c-black count mb-3">3 lessons</p>
+                                <div class="price d-flex justify-content-center align-items-center mb-3"><p class="text-18 c-orange">$ 20</p></div>
+                                <button type="button" class="btn bg-green btn-add-lesson ml-2 mb-3">+ add lesson</button>
+                            </div>
+                        </div>
+                        <ul class="list__lessons">
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="list__lessons-row d-flex align-items-md-end mr-3">
+                                        <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                        <a href="#" class="edit">
+                                            <img src="img/edit.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">free</p></div>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="d-flex flex-wrap types align-items-center">
+                                        <div class="type__item bg-blue">
+                                            <p class="text-14">online webinar</p>
+                                        </div>
+                                        <p class="type__item text-14">
+                                            <strong>Date: </strong> 30 April 2020
+                                        </p>
+                                        <p class="type__item text-14">
+                                            <strong>Time: </strong> 16:00
+                                        </p>
+                                        <p class="type__item text-14">
+                                            <strong>Duration: </strong>    2 hours
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">$ 40</p></div>
+                                </div>
+                                <div class="d-flex align-items-md-end mb-3">
+                                    <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                    <a href="#" class="edit">
+                                        <img src="img/edit.svg" alt="arrow">
+                                    </a>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="list__lessons-row d-flex align-items-md-end mr-3">
+                                        <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                        <a href="#" class="edit">
+                                            <img src="img/edit.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">free</p></div>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        <div class="list__module row align-items-center ">
+                            <div class="col-lg-5 d-flex align-items-sm-center mb-3">
+                                <img src="img/arrow.svg" alt="arrow" class="arrow">
+                                <div class="d-flex align-items-md-center">
+                                    <p class="list__title"><strong> Module 1: </strong> Lorem ipsum dolor sit amet </p>
+                                    <a href="#" class="edit">
+                                        <img src="img/edit.svg" alt="arrow">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 d-flex flex-wrap align-items-center justify-content-end ">
+                                <p class="text-14 c-black count mb-3">3 lessons</p>
+                                <div class="price d-flex justify-content-center align-items-center mb-3"><p class="text-18 c-orange">$ 20</p></div>
+                                <button type="button" class="btn bg-green btn-add-lesson ml-2 mb-3">+ add lesson</button>
+                            </div>
+                        </div>
+                        <ul class="list__lessons">
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="list__lessons-row d-flex align-items-md-end mr-3">
+                                        <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                        <a href="#" class="edit">
+                                            <img src="img/edit.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">free</p></div>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="d-flex flex-wrap types align-items-center">
+                                        <div class="type__item bg-blue">
+                                            <p class="text-14">online webinar</p>
+                                        </div>
+                                        <p class="type__item text-14">
+                                            <strong>Date: </strong> 30 April 2020
+                                        </p>
+                                        <p class="type__item text-14">
+                                            <strong>Time: </strong> 16:00
+                                        </p>
+                                        <p class="type__item text-14">
+                                            <strong>Duration: </strong>    2 hours
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">$ 40</p></div>
+                                </div>
+                                <div class="d-flex align-items-md-end mb-3">
+                                    <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                    <a href="#" class="edit">
+                                        <img src="img/edit.svg" alt="arrow">
+                                    </a>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="list__lessons-row d-flex align-items-md-end mr-3">
+                                        <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                        <a href="#" class="edit">
+                                            <img src="img/edit.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">free</p></div>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        <div class="list__module row align-items-center">
+                            <div class="col-lg-5 d-flex align-items-sm-center mb-3">
+                                <img src="img/arrow.svg" alt="arrow" class="arrow">
+                                <div class="d-flex align-items-md-center">
+                                    <p class="list__title"><strong> Module 1: </strong> Lorem ipsum dolor sit amet </p>
+                                    <a href="#" class="edit">
+                                        <img src="img/edit.svg" alt="arrow">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 d-flex flex-wrap align-items-center justify-content-end ">
+                                <p class="text-14 c-black count mb-3">3 lessons</p>
+                                <div class="price d-flex justify-content-center align-items-center mb-3"><p class="text-18 c-orange">$ 20</p></div>
+                                <button type="button" class="btn bg-green btn-add-lesson ml-2 mb-3">+ add lesson</button>
+                            </div>
+                        </div>
+                        <ul class="list__lessons">
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="list__lessons-row d-flex align-items-md-end mr-3">
+                                        <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                        <a href="#" class="edit">
+                                            <img src="img/edit.svg" alt="arrow" class="">
+                                        </a>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">free</p></div>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="d-flex flex-wrap types align-items-center">
+                                        <div class="type__item bg-blue">
+                                            <p class="text-14">online webinar</p>
+                                        </div>
+                                        <p class="type__item text-14">
+                                            <strong>Date: </strong> 30 April 2020
+                                        </p>
+                                        <p class="type__item text-14">
+                                            <strong>Time: </strong> 16:00
+                                        </p>
+                                        <p class="type__item text-14">
+                                            <strong>Duration: </strong>    2 hours
+                                        </p>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">$ 40</p></div>
+                                </div>
+                                <div class="d-flex align-items-md-end mb-3">
+                                    <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                    <a href="#" class="edit">
+                                        <img src="img/edit.svg" alt="arrow" >
+                                    </a>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                            <li class="list__lessons-item ml-auto">
+                                <div class="d-flex mb-3">
+                                    <div class="list__lessons-row d-flex align-items-md-end mr-3">
+                                        <p class="list__title"><strong> Lesson 1: </strong> Lorem ipsum dolor sit amet </p>
+                                        <a href="#" class="edit">
+                                            <img src="img/edit.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <div class="price d-flex justify-content-center align-items-center"><p class="text-18 c-orange">free</p></div>
+                                </div>
+                                <p class="text-14 c-black py-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                                <p class="text-14 materials"><span>Materials:  </span>  2 videos</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#" class="btn bg-blue mb-5">+ add module</a>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer bg-dark py-5">
+    <div class="container">
+        <div class="row flex-lg-row flex-column-reverse  flex-wrap justify-content-between align-items-xl-center align-items-xl-end">
+            <div class="col-lg-4 my-1">
+                <p class="text-14">Copyright @ 2020. All rights reserved. <br> Designed by<a href="#" class="text-14">BlackCatTech</a></p>
+            </div>
+            <div class="col-lg-8 d-flex flex-wrap align-items-center justify-content-md-end">
+                <p class="text-19 mr-3 my-1 ">Have idea how to make our service better? <br> Feel free to contact us!</p>
+                <a href="#" class="btn btn-white ml-md-4 my-md-1 my-3">write a message</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+    <div class="popup active">
+        <div class="popup-contain popup-module-lesson active">
+            <form class="form-box ">
+                <button type="button" class="close"></button>
+                <h2 class="title-32 mb-5">Create lesson</h2>
+                <div class="row align-items-end">
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <label class="mb-3">Module title</label>
+                            <input type="text" class="input" placeholder="Enter module title...">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-5">
+                        <div class="form-group">
+                            <label class="mb-3">Lesson price</label>
+                            <input type="text" class="input" placeholder="Enter price">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-5">
+                        <div class="form-group">
+                            <div class="select">
+                                <select>
+                                    <option value="Сurrency">Сurrency</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-sm-2">
+                        <div class="form-group">
+                            <label class="d-flex">
+                                <input type="checkbox" class="checkbox" checked>
+                                <span class="check"></span>
+                                <span class="text-14 c-dark">Free</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <label class="mb-3">Module description</label>
+                            <textarea class="textarea" placeholder="Enter module description..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-3">Broadcast link</label>
+                            <input type="text" class="input" placeholder="Enter braodcast link...">
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="mb-3">Add files</label>
+                            <div class="drop-files py-2 px-3">
+                                <div class="drop-files__info">
+                                    <div class="drop-files__arrow mb-2">
+                                        <img src="img/arrow-files.svg" alt="arrow" class="drop-files__arrow-icon mb-2">
+                                    </div>
+                                    <p class="c-blue">Перетащите сюда файлы чтобы загрузить</p>
+                                    <p class="c-blue-light">Размер файла не может превышать 1ГБ</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-4 col-6 px-1 mb-2">
+                                        <div class="drop-files__item d-flex flex-column justify-content-between p-2 pr-4">
+                                            <div class="delete active"><img src="img/delete.svg" alt="delete" class="delete-icon"></div>
+                                            <p class="c-blue">photo_20 ... 117.jpeg</p>
+                                            <p class="text-14 drop-files__size">34 кБ</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-4 col-6 px-1 mb-2">
+                                        <div class="drop-files__item d-flex flex-column justify-content-between p-2 pr-4">
+                                            <div class="delete active"><img src="img/delete.svg" alt="delete" class="delete-icon"></div>
+                                            <p class="c-blue">photo_20 ... 117.jpeg</p>
+                                            <p class="text-14 drop-files__size">34 кБ</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-4 col-6 px-1 mb-2">
+                                        <div class="drop-files__item d-flex flex-column justify-content-between p-2 pr-4">
+                                            <div class="delete active"><img src="img/delete.svg" alt="delete" class="delete-icon"></div>
+                                            <p class="c-blue">photo_20 ... 117.jpeg</p>
+                                            <p class="text-14 drop-files__size">34 кБ</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-4 col-6 px-1 mb-2">
+                                        <div class="drop-files__item d-flex flex-column justify-content-between p-2 pr-4">
+                                            <div class="delete active"><img src="img/delete.svg" alt="delete" class="delete-icon"></div>
+                                            <p class="c-blue">photo_20 ... 117.jpeg</p>
+                                            <p class="text-14 drop-files__size">34 кБ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn bg-orange m-auto">create module</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

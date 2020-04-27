@@ -46,7 +46,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item nav-link-upper">
                         <a href="#" class="nav-link  d-flex align-items-center">
-                            <img src="img/user.svg" alt="user" class="nav-user">
+                            <svg class="nav-user">
+                                <use xlink:href="img/sprite/sprite.svg#user"></use>
+                            </svg>
                             log in
                         </a>
                     </li>
@@ -70,109 +72,511 @@
 <div class="overlay"></div>
     <div id="wrapper-content">
         <div class="container">
-            <nav aria-label="breadcrumb" class="pt-3">
+            <nav aria-label="breadcrumb" class="pt-3 pb-2">
                 <ol class="breadcrumb px-0 py-2 m-0">
                     <li class="breadcrumb-item"><a href="#">Главная</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Профиль</li>
                 </ol>
             </nav>
-            <ul class="nav nav-tabs mt-5 mb-4" id="myTab" role="tablist">
+            <ul class="nav nav-tabs mt-5 pb-4" id="tabProfile" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="mycourses-tab" data-toggle="tab" href="#mycourses" role="tab" aria-controls="mycourses" aria-selected="false">my courses</a>
+                    <a class="nav-link " id="mycourses-tab" data-toggle="tab" href="#mycourses" role="tab" aria-controls="mycourses" aria-selected="false">my courses</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="purchasedCourses-tab" data-toggle="tab" href="#purchasedCourses" role="tab" aria-controls="purchasedCourses" aria-selected="false">Purchased Courses</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history" aria-selected="false">history</a>
+                </li>
             </ul>
-            <div class="tab-content" id="myTabContent">
+            <div class="tab-content pb-5" id="tabProfileContent">
                 <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="d-flex flex-wrap">
-                        <div class="profile__left">
-                            <h2 class="title-32 mb-2">Main</h2>
-                            <form class="form mb-3">
-                                <div class="field">
-                                    <p class="mb-3">Nickname</p>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <input type="text" class="input" placeholder="Enter lesson title...">
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="loader">
-                                                    <input type="file" id="files" name="files[]" multiple value="Загрузить файлы" accept="image/jpeg,image/jpg,image/png,image/gif">
-                                                    <label for="files" class="btn btn-green d-flex align-items-center justify-content-center">avatar</label>
-                                                </div>
-                                                <div class="loader-containt">
-                                                    <div class="delete active"><img src="img/delete.svg" alt="delete" class="delete-icon"></div>
-                                                    <div id="loader-avatar">
-                                                        <label>
-                                                            <img src="img/img.jpg" alt="img" class="loader-avatar_img">
-                                                        </label>
-                                                    </div>
-                                                 </div>
+                    <form class="form">
+                        <div class="d-flex flex-wrap">
+                            <div class="profile__left mb-5">
+                                <h2 class="title-32 mb-2">Main</h2>
+                                <div class="form-box mb-3">
+                                    <div class="row align-items-end">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="mb-3">Nickname</label>
+                                                <input type="text" class="input" placeholder="Enter lesson title...">
                                             </div>
                                         </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="loader">
+                                                        <input type="file" id="files" name="files[]" multiple accept="image/jpeg,image/jpg,image/png,image/gif">
+                                                        <label for="files" class="btn btn-green d-flex align-items-center justify-content-center">avatar</label>
+                                                    </div>
+                                                    <div class="loader-containt">
+                                                        <div class="delete active"><img src="img/delete.svg" alt="delete" class="delete-icon"></div>
+                                                        <div id="loader-avatar">
+                                                            <label>
+                                                                <img src="img/img.jpg" alt="img" class="loader-avatar_img">
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="mb-3">Name</label>
+                                                <input type="text" class="input" placeholder="Enter name...">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="mb-3">Second name</label>
+                                                <input type="text" class="input" placeholder="Enter second name...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="form-group">
+                                        <label class="mb-3">About me</label>
+                                        <textarea class="textarea" placeholder="Enter about me..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__right mb-5">
+                                <h2 class="title-32 mb-2">Communication</h2>
+                                <div class="form-box mb-3">
+                                    <div class="form-group">
+                                        <label class="mb-3">E-mail</label>
+                                        <input type="text" class="input" placeholder="Enter e-mail...">
+                                    </div>
+                                </div>
+                                <div class="form-box mb-3">
+                                    <div class="form-group">
+                                        <label class="mb-3">Phone</label>
+                                        <input type="text" class="input" placeholder="Enter phone...">
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="mb-3">Facebook</label>
+                                                <input type="text" class="input" placeholder="Enter...">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="mb-3">Linkedin</label>
+                                                <input type="text" class="input" placeholder="Enter...">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="mb-3">Instagram</label>
+                                                <input type="text" class="input" placeholder="Enter...">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="mb-3">Youtube</label>
+                                                <input type="text" class="input" placeholder="Enter...">
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p class="mb-3">Name</p>
-                                        <input type="text" class="input" placeholder="Enter name...">
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-3">Second name</p>
-                                        <input type="text" class="input" placeholder="Enter second name...">
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="form">
-                                <p class="mb-3">About me</p>
-                                <textarea class="textarea" placeholder="Enter about me..."></textarea>
                             </div>
                         </div>
-                        <div class="profile__right">
-                            <h2 class="title-32 mb-2">Communication</h2>
-                            <form class="form mb-3">
-                                <p class="mb-3">E-mail</p>
-                                <input type="text" class="input mb-3" placeholder="Enter e-mail...">
-                            </form>
-                            <form class="form mb-3">
-                                <p class="mb-3">Phone</p>
-                                <input type="text" class="input mb-3"" placeholder="Enter phone...">
-                            </form>
-                            <form class="form">
-                                <div class="row">
-                                    <div class="col-6 mb-4 pb-2">
-                                        <p class="mb-3">Facebook</p>
-                                        <input type="text" class="input" placeholder="Enter...">
+                        <div class="d-flex flex-wrap my-5">
+                            <div class="profile__left">
+                                <h2 class="title-32 mb-2">Categories</h2>
+                                <div class="form-box mb-3">
+                                    <div class="form-group">
+                                        <label class="mb-3">Select categories</label>
+                                        <div class="select">
+                                            <select>
+                                                <option value="Сurrency" selected disabled>category</option>
+                                                <option value="">category</option>
+                                                <option value="">category</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col-6 mb-4 pb-2">
-                                        <p class="mb-3">Linkedin</p>
-                                        <input type="text" class="input" placeholder="Enter...">
+                                    <div class="form-group">
+                                        <label class="mb-3">Select categories</label>
+                                        <div class="tags">
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#drawing</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#uidesign</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#webdesign</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#so_long_hashtag</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#js</a>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <p class="mb-3">Instagram</p>
-                                        <input type="text" class="input" placeholder="Enter...">
+
+                                </div>
+                            </div>
+                            <div class="profile__right disabled">
+                                <h2 class="title-32 mb-2">Categories</h2>
+                                <div class="form-box mb-3">
+                                    <div class="form-group">
+                                        <label class="mb-3">Select skills</label>
+                                        <input type="text" class="input" placeholder="Select skills">
                                     </div>
-                                    <div class="col-6">
-                                        <p class="mb-3">Youtube</p>
-                                        <input type="text" class="input" placeholder="Enter...">
+                                    <div class="form-group">
+                                        <label class="mb-3">Select categories</label>
+                                        <div class="tags">
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#drawing</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#uidesign</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#webdesign</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#so_long_hashtag</a>
+                                            <a href="#" class="tags-item bg-green mr-2 mb-2">#js</a>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap flex-md-row flex-column-reverse align-items-center justify-content-center pb-5">
+                            <a href="#" class="btn btn-gray mr-md-3 mt-3">cancel</a>
+                            <button type="submit" class="btn bg-orange ml-md-3 mt-3">save changes</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade " id="mycourses" role="tabpanel" aria-labelledby="mycourses-tab">
+                    <a href="#" class="btn bg-blue my-lg-5 ">create lesson</a>
+                    <div class="row py-5">
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-orange">$ 20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price price-green d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-green">free</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-orange">$ 20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price price-green d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-green">free</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-orange">$ 20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price price-green d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-green">free</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="tab-pane fade" id="mycourses" role="tabpanel" aria-labelledby="mycourses-tab">
-
                 </div>
                 <div class="tab-pane fade" id="purchasedCourses" role="tabpanel" aria-labelledby="purchasedCourses-tab">
+                    <div class="row pb-5">
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-orange">$ 20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price price-green d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-green">free</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-orange">$ 20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price price-green d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-green">free</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                            <div class="card">
+                                <div class="card__top">
+                                    <img src="img/img.jpg" alt="image" class="card__img">
+                                    <div class="card__type bg-dark" >
+                                        <p class="text-14">classroom</p>
+                                    </div>
+                                </div>
+                                <div class="card__content">
+                                    <a href="#" class="card__title">Lorem ipsum dolor sit amet concescetur</a>
+                                    <div class="mt-2">
+                                        <ul class="card__list">
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span> by </span>
+                                                <a href="#">Authour’s name</a> </p></li>
+                                            <li class="card__list-item"><p class="text-14 c-black"> <span>in </span> <a href="#">Biology</a>, <a href="#">Chemistry</a>, <a href="#">Category</a> </p></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="d-flex align-items-center">
+                                                <img src="img/user.svg" alt="user" class="card__people-icon mr-3">
+                                                <span class="text-14 c-black">10 left</span>
+                                            </p>
+                                            <div class="price d-flex align-items-center justify-content-center">
+                                                <p class="text-18 c-orange">$ 20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
 
                 </div>
             </div>
@@ -182,13 +586,16 @@
     </div>
     <footer class="footer bg-dark py-5">
     <div class="container">
-        <div class="d-flex flex-lg-row flex-column-reverse flex-wrap justify-content-between align-items-lg-center">
-            <p class="text-14 my-1">Copyright @ 2020. All rights reserved. <br> Designed by<a href="#" class="text-14">BlackCatTech</a></p>
-            <div class="d-flex flex-wrap align-items-center ">
-                <p class="text-19 mr-3 my-1">Have idea how to make our service better? <br> Feel free to contact us!</p>
+        <div class="row flex-lg-row flex-column-reverse  flex-wrap justify-content-between align-items-xl-center align-items-xl-end">
+            <div class="col-lg-4 my-1">
+                <p class="text-14">Copyright @ 2020. All rights reserved. <br> Designed by<a href="#" class="text-14">BlackCatTech</a></p>
+            </div>
+            <div class="col-lg-8 d-flex flex-wrap align-items-center justify-content-md-end">
+                <p class="text-19 mr-3 my-1 ">Have idea how to make our service better? <br> Feel free to contact us!</p>
                 <a href="#" class="btn btn-white ml-md-4 my-md-1 my-3">write a message</a>
             </div>
         </div>
+
     </div>
 </footer>
 </div>
