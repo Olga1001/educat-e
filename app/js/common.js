@@ -97,6 +97,34 @@ $(document).ready(function () {
         $(this).closest(".list-item").toggleClass('active').siblings().removeClass('active');
         $(this).closest(".list-item").find(".list__lessons").slideToggle(300).closest(".list-item").siblings().find(".list__lessons").slideUp(300);
     });
+
+//COURSE
+
+//Scrolling content by holding the left mouse button
+    window.onload = function () {
+        var scr = $(".list__files-row");
+        scr.mousedown(function () {
+            var startX = this.scrollLeft + event.pageX;
+            var startY = this.scrollTop + event.pageY;
+            scr.mousemove(function () {
+                this.scrollLeft = startX - event.pageX;
+                this.scrollTop = startY - event.pageY;
+                return false;
+            });
+        });
+        $(window).mouseup(function () {
+            scr.off("mousemove");
+        });
+    }
+
+    //hide shadow
+    $(".list__files-row").scroll(function () {
+        if(this.scrollWidth - this.scrollLeft === this.clientWidth){
+            $(this).closest(".list__files").addClass('active');
+        }else {
+            $(this).closest(".list__files").removeClass('active');
+        }
+    });
 });
 
 
