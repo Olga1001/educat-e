@@ -3,6 +3,16 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1266px)
+  .authorization
+    form
+      max-width: 30vw
+    &__right
+      padding: 10vw 0 12.3vw 0
+  .authorization__container
+    padding: 70px 3.2vw 50px
+  .header-authorization
+    padding: 0 2.7vw
 @media only screen and (max-width : 1199px)
   .nav-tabs .nav-link
     min-width: 175px
@@ -41,6 +51,14 @@
     padding: 0 10px 0 26px
   .start-item
     padding: 130px 50px 70px 50px
+  .title-welcome
+    font-size: 70px
+    line-height: 72px
+  .header-authorization
+    padding: 0
+  .authorization__container
+    padding: 40px 20px
+    min-height: calc(100vh - 213px - 81px)
 @media only screen and (max-width : 991px)
   .search__popular
     width: 100%
@@ -104,6 +122,11 @@
       width: 100%
     .btn
       max-width: 100%
+  .title-welcome
+    font-size: 51px
+    line-height: 53px
+  .authorization__container, #wrapper-content
+    min-height: calc(100vh - 193px - 71px)
 @media only screen and (max-width : 767px)
   .popular .title
     width: 100%
@@ -215,6 +238,14 @@
     padding: 0
   .list__files .drop-files__item
     min-width: 190px
+  .authorization form
+    max-width: 100%
+  .btn-login, .btn-check-mail
+    width: 100%
+    line-height: 55px
+    height: 55px
+  .authorization__container, #wrapper-content
+    min-height: calc(100vh - 160px - 71px)
 @media only screen and (max-width : 575px)
   .slider
     margin: 0
@@ -264,3 +295,8 @@
     max-height: 70vw
   .reviews__item, .feedback, .reviews
     padding: 20px 15px
+  .authorization__container
+    padding: 40px 10px
+  .authorization__container, #wrapper-content
+    min-height: calc(100vh - 214px - 71px)
+
