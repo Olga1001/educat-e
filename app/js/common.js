@@ -127,13 +127,12 @@ $(document).ready(function () {
     });
 
     $(function(){
-        let checkboxs = $('input.checkbox-authorization');
-        // var checkboxs2 = $('input[type=checkbox]');
-        // var checkboxs3 = $('input[type=checkbox]');
+        let checkboxs = $('input[type=checkbox]');
+        let checkboxsTitle= $('input[type=checkbox]').attr("title");
 
         checkboxs.each(function(){
             $(this).wrap('<label class="d-flex"></label>');
-            $(this).before('<span class="check"></span><span class="text-14 c-black weight-light">Remember Me</span>');
+            $(this).after('<span class="check"></span><span class="text-14 c-black weight-light">' + checkboxsTitle + '</span>');
         });
 
         checkboxs.change(function(){
