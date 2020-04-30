@@ -115,8 +115,7 @@
                                     <div class="select">
                                         <select>
                                             <option value="Select category" selected>Select category</option>
-                                            <option value="Select category">Select category</option>
-                                            <option value="Select category">Select category</option>
+                                            <option value="Select category" selected>Select category</option>
                                         </select>
                                     </div>
                                     <p class="help-block help-block-error"></p>
@@ -128,8 +127,7 @@
                                     <div class="select">
                                         <select>
                                             <option value="Select category" selected>Select category</option>
-                                            <option value="Select category">Select category</option>
-                                            <option value="Select category">Select category</option>
+                                            <option value="Select category" selected>Select category</option>
                                         </select>
                                     </div>
                                     <p class="help-block help-block-error"></p>
@@ -139,7 +137,7 @@
                                 <div class="row align-items-end">
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label class="mb-3">Language</label>
+                                            <label class="mb-3">Lesson price</label>
                                             <input type="text" class="input" placeholder="Enter price">
                                             <p class="help-block help-block-error">error</p>
                                         </div>
@@ -150,6 +148,7 @@
                                                 <select>
                                                     <option value="Сurrency" selected disabled>Сurrency</option>
                                                     <option value="">Сurrency</option>
+                                                    <option value="">Сurrency</option>
                                                 </select>
                                             </div>
                                             <p class="help-block help-block-error"></p>
@@ -158,7 +157,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <input type="checkbox" class="checkbox checkbox-free" title="Free">
+                                            <input type="checkbox" class="checkbox" title="Free">
                                             <p class="help-block help-block-error"></p>
                                         </div>
                                     </div>
@@ -170,17 +169,13 @@
                                     <div class="col-sm-9">
                                         <div class="form-group">
                                             <label class="mb-3">Number of seats in the lesson</label>
-                                            <input type="text" class="input" placeholder="Lesson data">
+                                            <input type="text" class="input" placeholder="Enter number....">
                                             <p class="help-block help-block-error">error</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label class="d-flex">
-                                                <input type="checkbox" class="checkbox">
-                                                <span class="check"></span>
-                                                <span class="text-14 c-dark">Unlimited</span>
-                                            </label>
+                                            <input type="checkbox" class="checkbox" title="Unlimited">
                                             <p class="help-block help-block-error"></p>
                                         </div>
                                     </div>
@@ -188,61 +183,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-end pb-5">
+                    <div class="d-flex flex-wrap flex-md-row flex-column-reverse align-items-center justify-content-center pb-5">
+                        <a href="#" class="btn btn-gray mr-md-3 mb-3">cancel</a>
                         <button type="submit" class="btn bg-orange ml-md-3 mb-3">save changes</button>
                     </div>
                 </form>
-                <p class="text-18 c-black pt-5 pb-3 mb-3">Create modules in each of which you can add lessons.</p>
-                <a href="#" class="btn bg-blue mb-5">+ add module</a>
+                <p class="text-18 c-black pt-5 pb-3 mb-3">Please create cource for adding modules.</p>
+                <a href="#" class="btn btn-gray mb-5">+ add module</a>
             </div>
         </div>
-    </div>
 
-    <div class="popup active">
-        <div class="popup-contain popup-module active">
-            <form class="form-box">
-                <button type="button" class="close"></button>
-                <h2 class="title-32 mb-5">Create module</h2>
-                <div class="row align-items-end">
-                    <div class="col-lg-7">
-                        <div class="form-group">
-                            <label class="mb-3">Module title</label>
-                            <input type="text" class="input" placeholder="Enter module title...">
-                            <p class="help-block help-block-error">error</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-5">
-                        <div class="form-group">
-                            <label class="mb-3">Lesson price</label>
-                            <input type="text" class="input" placeholder="Enter price">
-                            <p class="help-block help-block-error">error</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-5">
-                        <div class="form-group">
-                            <div class="select">
-                                <select>
-                                    <option value="Сurrency">Сurrency</option>
-                                </select>
-                            </div>
-                            <p class="help-block help-block-error"></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-sm-2">
-                        <div class="form-group">
-                            <input type="checkbox" class="checkbox checkbox-free" checked>
-                            <p class="help-block help-block-error"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="mb-3">Module description</label>
-                    <textarea class="textarea" placeholder="Enter module description..."></textarea>
-                    <p class="help-block help-block-error">error</p>
-                </div>
-                <button class="btn bg-orange m-auto">create module</button>
-            </form>
-        </div>
     </div>
     <footer class="footer bg-dark py-5">
     <div class="container">

@@ -128,9 +128,9 @@ $(document).ready(function () {
 
     $(function(){
         let checkboxs = $('input[type=checkbox]');
-        let checkboxsTitle= $('input[type=checkbox]').attr("title");
 
         checkboxs.each(function(){
+            let checkboxsTitle=  $(this).parent().find('input[type=checkbox]').attr("title");
             $(this).wrap('<label class="d-flex"></label>');
             $(this).after('<span class="check"></span><span class="text-14 c-black weight-light">' + checkboxsTitle + '</span>');
         });
