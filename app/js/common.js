@@ -125,6 +125,25 @@ $(document).ready(function () {
             $(this).closest(".list__files").removeClass('active');
         }
     });
+
+    $(function(){
+        let checkboxs = $('input.checkbox-authorization');
+        // var checkboxs2 = $('input[type=checkbox]');
+        // var checkboxs3 = $('input[type=checkbox]');
+
+        checkboxs.each(function(){
+            $(this).wrap('<label class="d-flex"></label>');
+            $(this).before('<span class="check"></span><span class="text-14 c-black weight-light">Remember Me</span>');
+        });
+
+        checkboxs.change(function(){
+            if($(this).is(':checked')){
+                $(this).parent().addClass('checked');
+            } else {
+                $(this).parent().removeClass('checked');
+            }
+        });
+    })
 });
 
 

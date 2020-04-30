@@ -287,6 +287,12 @@ strong
   overflow: hidden
   width: 100%
   max-width: 305px
+  &.bg-green
+    &:hover
+      background-color: #0CB77E
+  &.bg-blue
+    &:hover
+      background-color: #1B83F9
   &-blue
     max-width: 280px
     padding: 0 20px 0 40px
@@ -325,10 +331,16 @@ strong
   &-green
     background: $color2 url("../img/arrow-down.svg") no-repeat left 20px center / 16px
     padding: 0 20px 0 36px
+    transition: all 0.3s ease
+    &:hover
+      background-color: #0CB77E
   &-gray
     border: 1px solid #9D9D9D
     line-height: 53px
     color: #9D9D9D
+    transition: all 0.3s ease
+    &:hover
+      color: $color3
 .btn-check-mail
   max-width: 100%
 .btn-login
@@ -518,7 +530,9 @@ strong
   display: none
   &:checked ~ .check
     background: #FFFFFF url("../img/check.svg") no-repeat center / 80%
-
+.checked
+  .check
+    background: #FFFFFF url("../img/check.svg") no-repeat center / 80%
 .popup
   position: fixed
   top: 0

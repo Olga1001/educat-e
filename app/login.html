@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 <div id="wrapper">
     <div id="wrapper-content">
         <div class="authorization">
@@ -35,35 +36,33 @@
                     <div class="authorization__container login d-flex flex-column justify-content-center">
                         <h1 class="title-36 mb-4">Login</h1>
                         <form class="py-4">
-                                <div class="form-group">
-                                    <label class="form-group__icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite.svg#user"></use>
-                                        </svg>
-                                    </label>
-                                    <input type="text" class="input" placeholder="Enter e-mail...">
+                            <div class="form-group has-error">
+                                <label class="form-group__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#user"></use>
+                                    </svg>
+                                </label>
+                                <input type="text" class="input" placeholder="Enter e-mail...">
+                                <p class="help-block help-block-error">error</p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-group__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite/sprite.svg#icon-password"></use>
+                                    </svg>
+                                </label>
+                                <input type="text" class="input" placeholder="Enter password...">
+                                <p class="help-block help-block-error">error</p>
+                            </div>
+                            <div class="d-flex justify-content-between py-4">
+                                <div class="form-group m-0">
+                                    <input type="checkbox" class="checkbox checkbox-authorization">
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label class="form-group__icon">
-                                        <svg>
-                                            <use xlink:href="img/sprite/sprite.svg#icon-password"></use>
-                                        </svg>
-                                    </label>
-                                    <input type="text" class="input" placeholder="Enter password...">
-                                </div>
-                                <div class="d-flex justify-content-between py-4">
-                                    <div class="form-group m-0">
-                                        <label class="d-flex">
-                                            <input type="checkbox" class="checkbox">
-                                            <span class="check"></span>
-                                            <span class="text-14 c-black weight-light">Remember Me</span>
-                                        </label>
-                                    </div>
-                                    <a href="#" class="text-14 c-green weight-medium"> Forgot  password?</a>
-                                </div>
-                                <button type="submit" class="btn btn-orange btn-login">login</button>
-                                <p class="text-14 c-gray">Do not have an account? <a href="#" class="c-gray"><strong> Sign up</strong></a></p>
-                            </form>
+                                <a href="#" class="text-14 c-green weight-medium"> Forgot  password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-orange btn-login">login</button>
+                            <p class="text-14 c-gray">Do not have an account? <a href="#" class="c-gray"><strong> Sign up</strong></a></p>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-7 col-6 authorization__right mt-auto d-md-block d-none">
