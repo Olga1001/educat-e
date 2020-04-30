@@ -1,5 +1,5 @@
 .offer__course
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/work-bed_1.jpg") no-repeat center bottom / cover
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/work-bed_1.jpg") no-repeat center bottom 80% / cover
   min-height: 380px
   padding: 60px 10px
   width: 100%
@@ -7,10 +7,18 @@
     line-height: 45px
     height: 45px
 .star
+  direction: rtl
+  width: fit-content
   &__svg
     height: 18px
-    width: 120px
-    margin-right: 22px
+    width: 25px
+    padding-right: 7px
+    fill: #C4C4C4
+.star-link:focus svg, .star-link:focus ~ .star-link svg
+  fill: #FA5D43
+.star-link:hover svg, .star-link:hover ~ .star-link svg
+  fill: #FA5D43
+
 .social
   svg
     width: 20px
@@ -34,6 +42,8 @@
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05)
     border-radius: 15px
     overflow: hidden
+    position: sticky
+    top: 100px
     &-img
       max-height: 230px
       height: 100%
@@ -103,7 +113,9 @@
     border-radius: 15px
     padding: 35px
     .star__svg
-      margin-right: 0
+      padding-right: 0
+      width: 15px
+      height: 15px
     &-title
       font-size: 20px
       line-height: 20px
