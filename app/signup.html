@@ -32,16 +32,17 @@
                             </ul>
                         </nav>
                     </header>
-                    <div class="authorization__container login d-flex flex-column justify-content-center">
+                    <div class="authorization__container d-flex flex-column justify-content-center">
                         <h1 class="title-36 mb-3">Sign up</h1>
                         <form class="py-4">
-                            <div class="form-group">
+                            <div class="form-group has-error">
                                 <label class="form-group__icon">
                                     <svg>
                                         <use xlink:href="img/sprite/sprite.svg#user"></use>
                                     </svg>
                                 </label>
                                 <input type="text" class="input" placeholder="Enter e-mail...">
+                                <p class="help-block help-block-error">error</p>
                             </div>
                             <div class="form-group">
                                 <label class="form-group__icon">
@@ -50,6 +51,7 @@
                                     </svg>
                                 </label>
                                 <input type="text" class="input" placeholder="Enter password...">
+                                <p class="help-block help-block-error">error</p>
                             </div>
                             <div class="form-group">
                                 <label class="form-group__icon">
@@ -58,6 +60,7 @@
                                     </svg>
                                 </label>
                                 <input type="text" class="input" placeholder="Repeat password...">
+                                <p class="help-block help-block-error">error</p>
                             </div>
                             <button type="submit" class="btn btn-orange btn-login">login</button>
                             <p class="text-14 c-gray pt-2">Do not have an account? <a href="#" class="c-gray"><strong> Sign up</strong></a></p>
